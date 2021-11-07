@@ -1,12 +1,14 @@
 var timeNote = ["8am", "9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm", "5pm"]
-var times = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"]
+//An array of actual times?
+var times = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
 //Using Moment.js for current date and time
-var currentTime = moment().format('LLLL');
+var date = moment().format("LLLL")
+var currentTime = moment().hour();
 var currentDay = document.querySelector("#currentDay")
 
 //Put date on the screen
-currentDay.textContent = currentTime
+currentDay.textContent = date
 
 for(i = 0; i < times.length; i++) {
     var taskTime = times[i]
